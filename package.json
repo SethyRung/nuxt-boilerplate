@@ -10,24 +10,24 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@nuxt/eslint": "^1.11.0",
+    "@nuxt/eslint": "^1.12.1",
     "@nuxt/fonts": "^0.12.1",
     "@nuxt/ui": "^4.2.1",
     "@pinia/nuxt": "^0.11.3",
-    "@tailwindcss/vite": "^4.1.17",
+    "@tailwindcss/vite": "^4.1.18",
     "@vueuse/core": "^14.1.0",
     "@vueuse/nuxt": "^14.1.0",
-    "nuxt": "^4.2.1",
+    "nuxt": "^4.2.2",
     "pinia": "^3.0.4",
-    "tailwindcss": "^4.1.17",
+    "tailwindcss": "^4.1.18",
     "v-calendar": "^2.4.2",
     "vue": "latest",
     "vue-router": "latest",
     "zod": "^4.1.13"
   },
   "devDependencies": {
-    "@iconify-json/lucide": "^1.2.76",
-    "prettier": "^3.7.1"
+    "@iconify-json/lucide": "^1.2.80",
+    "prettier": "^3.7.4"
   },
   "overrides": {
     "vue": "latest"
