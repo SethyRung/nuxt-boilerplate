@@ -1,10 +1,10 @@
-## Nuxt Boilerplate 🚀
+## Nuxt Boilerplate
 
-## Overview 🌟
+### Overview
 
 This repository provides a **Nuxt.js Boilerplate** – a pre-configured starter template designed to kickstart your web development projects with Nuxt.js. It comes with essential configurations and common directory structures, allowing you to jump straight into building your application without the initial setup overhead. This boilerplate emphasizes a modern development workflow with TypeScript and streamlined styling.
 
-## Features ✨
+### Features
 
 This boilerplate is set up to provide a strong foundation with features typically including:
 
@@ -15,7 +15,7 @@ This boilerplate is set up to provide a strong foundation with features typicall
 - **Organized Structure**: Standard Nuxt.js directory layout for components, pages, layouts, and utilities, promoting maintainable code.
 - **Development & Build Scripts**: Ready-to-use scripts for local development and production builds.
 
-## Technologies Used 🛠️
+### Technologies Used
 
 This boilerplate is built upon a robust and modern stack:
 
@@ -25,79 +25,60 @@ This boilerplate is built upon a robust and modern stack:
 - **CSS**: For styling the application.
 - **JavaScript**: The foundational language for web interactivity.
 
-## Installation & Setup 🚀
+### Installation & Setup
 
 To start a new project using this boilerplate, follow these steps:
 
-1. Prerequisites:
-
+1. **Prerequisites**:
    - **Node.js**: Ensure you have Node.js (LTS version recommended) installed. You can download it from [nodejs.org](https://nodejs.org/en).
-   - **npm or Yarn**: Node.js installation typically includes npm. You can also install Yarn if you prefer.
+   - **pnpm**: This project uses pnpm as the package manager.
 
-2. Clone the Repository:
-
-   `git clone https://github.com/SethyRung/Nuxt-Boilerplate.git`
-
-3. Navigate to Project Directory:
-
-   `cd Nuxt-Boilerplate`
-
-4. Install Dependencies:
+2. **Clone the Repository**:
 
    ```bash
-   npm install
-   # or
-   yarn install
+   git clone https://github.com/SethyRung/Nuxt-Boilerplate.git
    ```
 
-5. Start the Development Server:
+3. **Navigate to Project Directory**:
 
    ```bash
-   npm run dev
-   # or
-   yarn dev
+   cd Nuxt-Boilerplate
    ```
 
-   This will start the development server, usually accessible at `http://localhost:3000` (or a similar port).
+4. **Install Dependencies**:
 
-## Usage & Development 💻
+   ```bash
+   pnpm install
+   ```
 
-Once the development server is running, you can start building your application:
+5. **Start the Development Server**:
 
-- **Creating Pages**: Add `.vue` files inside the `app/pages/` directory to create new routes.
-- **Components**: Develop reusable Vue components in the `app/components/` directory.
-- **Layouts**: Define common page structures in `app/layouts/`.
-- **API Routes**: Use the `server/api/` directory for backend API routes (powered by Nitro).
-- **Utilities**: Place helper functions in the `app/utils/` directory.
+   ```bash
+   pnpm dev
+   ```
 
-### Build for Production 📦
+   This will start the development server, usually accessible at `http://localhost:3000`.
+
+#### Build for Production
 
 To build the application for deployment:
 
 ```bash
-npm run build
-# or
-yarn build
+pnpm build
 ```
 
 This command will compile your application into a production-ready build in the `.output/` directory.
 
-### Start Production Server (if SSR/Server API used) ▶️
+#### Start Production Server
 
 If your application uses server-side rendering or server API routes:
 
 ```bash
-npm run start
-# or
-yarn start
+pnpm start
 ```
 
 This command starts the production server.
 
-## License
+### License
 
-This project is licensed under the MIT License.
-
-## Contact
-
-For any inquiries or suggestions, you can reach out to [Sethy Rung](https://github.com/SethyRung) via GitHub.
+This project is licensed under the [MIT License](LICENSE).

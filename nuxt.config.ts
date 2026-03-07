@@ -4,20 +4,13 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4,
   },
-  compatibilityDate: "2024-11-27",
-  devtools: { enabled: true },
+  compatibilityDate: "2026-03-01",
   css: ["~/assets/css/main.css"],
-  modules: [
-    "@nuxt/ui",
-    "@nuxt/eslint",
-    "@pinia/nuxt",
-    "@vueuse/nuxt",
-    "@nuxt/fonts",
-  ],
+  modules: ["@nuxt/ui", "@pinia/nuxt", "@vueuse/nuxt"],
   vite: {
-    plugins: [tailwindcss()],
-  },
-  colorMode: {
-    preference: "light",
+    plugins: [
+      // @ts-expect-error
+      tailwindcss(),
+    ],
   },
 });
