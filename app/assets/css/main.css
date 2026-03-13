@@ -2,9 +2,8 @@
 @import "@nuxt/ui";
 
 @theme static {
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-  --font-pixel-square: var(--font-geist-pixel-square);
+  --font-sans: "Geist", sans-serif;
+  --font-mono: "Geist Mono", sans-serif;
 }
 
 @utility no-scrollbar {
