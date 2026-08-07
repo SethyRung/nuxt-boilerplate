@@ -11,7 +11,10 @@
     "lint": "oxlint",
     "lint:fix": "oxlint --fix",
     "fmt": "oxfmt",
-    "fmt:check": "oxfmt --check"
+    "fmt:check": "oxfmt --check",
+    "test": "vitest",
+    "test:unit": "vitest --project unit",
+    "test:nuxt": "vitest --project nuxt"
   },
   "dependencies": {
     "@nuxt/ui": "^4.10.0",
@@ -26,7 +29,12 @@
   },
   "devDependencies": {
     "@iconify-json/lucide": "^1.2.121",
+    "@nuxt/test-utils": "^4.1.0",
+    "@vue/test-utils": "^2.4.11",
+    "happy-dom": "^20.11.1",
     "oxfmt": "^0.36.0",
-    "oxlint": "^1.77.0"
+    "oxlint": "^1.77.0",
+    "playwright-core": "^1.62.1",
+    "vitest": "^4.1.10"
   }
 }
