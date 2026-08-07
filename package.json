@@ -14,22 +14,19 @@
     "fmt:check": "oxfmt --check"
   },
   "dependencies": {
-    "@nuxt/ui": "^4.5.1",
-    "@tailwindcss/vite": "^4.2.1",
-    "@vueuse/core": "^14.2.1",
-    "@vueuse/nuxt": "^14.2.1",
-    "nuxt": "^4.3.1",
-    "tailwindcss": "^4.2.1",
-    "vue": "latest",
-    "vue-router": "latest",
-    "zod": "^4.3.6"
+    "@nuxt/ui": "^4.10.0",
+    "@tailwindcss/vite": "^4.3.3",
+    "@vueuse/core": "^14.4.0",
+    "@vueuse/nuxt": "^14.4.0",
+    "nuxt": "^4.5.2",
+    "tailwindcss": "^4.3.3",
+    "vue": "^3.5.41",
+    "vue-router": "^5.2.0",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
-    "@iconify-json/lucide": "^1.2.96",
+    "@iconify-json/lucide": "^1.2.121",
     "oxfmt": "^0.36.0",
-    "oxlint": "^1.51.0"
-  },
-  "overrides": {
-    "vue": "latest"
+    "oxlint": "^1.77.0"
   }
 }
