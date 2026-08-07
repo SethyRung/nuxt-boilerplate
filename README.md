@@ -1,84 +1,92 @@
-## Nuxt Boilerplate
+# Nuxt Boilerplate
 
-### Overview
+A pre-configured Nuxt 4 starter template with a modern, opinionated tooling setup so you can start building features instead of wiring config.
 
-This repository provides a **Nuxt.js Boilerplate** – a pre-configured starter template designed to kickstart your web development projects with Nuxt.js. It comes with essential configurations and common directory structures, allowing you to jump straight into building your application without the initial setup overhead. This boilerplate emphasizes a modern development workflow with TypeScript and streamlined styling.
+## Stack
 
-### Features
+- **[Nuxt 4](https://nuxt.com)** — Vue meta-framework with the v4 compatibility future flag enabled.
+- **[Vue 3](https://vuejs.org)** — Reactive UI layer.
+- **TypeScript** — Strict, type-safe code across `app/` and `server/`.
+- **[Tailwind CSS v4](https://tailwindcss.com)** — Loaded via `@tailwindcss/vite` (no PostCSS config needed).
+- **[Nuxt UI](https://ui.nuxt.com)** — Pre-styled component library.
+- **[VueUse](https://vueuse.org)** — Composables auto-imported via `@vueuse/nuxt`.
+- **[Zod](https://zod.dev)** — Schema validation.
 
-This boilerplate is set up to provide a strong foundation with features typically including:
+## Tooling
 
-- **Nuxt.js Framework**: Leverages the power of Nuxt.js for server-side rendering (SSR), static site generation (SSG), routing, and more.
-- **TypeScript Support**: Fully configured for type-safe development, enhancing code quality and developer experience.
-- **Pre-configured Styling**: Includes a basic CSS setup, ready for customization.
-- **ESLint & Prettier**: Integrated for consistent code formatting and linting, ensuring code quality across the team.
-- **Organized Structure**: Standard Nuxt.js directory layout for components, pages, layouts, and utilities, promoting maintainable code.
-- **Development & Build Scripts**: Ready-to-use scripts for local development and production builds.
+- **[Bun](https://bun.sh)** — Package manager and script runner.
+- **[oxlint](https://oxc.rs/docs/guide/usage/linter.html)** — Fast Rust-based linter (`oxlint.config.ts`).
+- **[oxfmt](https://oxc.rs/docs/guide/usage/formatter.html)** — Fast Rust-based formatter (`oxfmt.config.ts`).
+- **[Vitest](https://vitest.dev)** — Test runner with three projects defined in `vitest.config.ts`:
+  - `unit` — Node-environment unit tests in `test/unit/`.
+  - `e2e` — Node-environment end-to-end tests in `test/e2e/`.
+  - `nuxt` — Nuxt-environment component/integration tests in `test/nuxt/` (powered by `@nuxt/test-utils`).
 
-### Technologies Used
+## Project Structure
 
-This boilerplate is built upon a robust and modern stack:
-
-- **Nuxt.js**: The intuitive and powerful open-source framework for building web applications with Vue.js.
-- **Vue.js**: The progressive JavaScript framework for building user interfaces.
-- **TypeScript**: A strongly typed superset of JavaScript that compiles to plain JavaScript, offering better scalability and error checking.
-- **CSS**: For styling the application.
-- **JavaScript**: The foundational language for web interactivity.
-
-### Installation & Setup
-
-To start a new project using this boilerplate, follow these steps:
-
-1. **Prerequisites**:
-   - **Node.js**: Ensure you have Node.js (LTS version recommended) installed. You can download it from [nodejs.org](https://nodejs.org/en).
-   - **pnpm**: This project uses pnpm as the package manager.
-
-2. **Clone the Repository**:
-
-   ```bash
-   git clone https://github.com/SethyRung/Nuxt-Boilerplate.git
-   ```
-
-3. **Navigate to Project Directory**:
-
-   ```bash
-   cd Nuxt-Boilerplate
-   ```
-
-4. **Install Dependencies**:
-
-   ```bash
-   pnpm install
-   ```
-
-5. **Start the Development Server**:
-
-   ```bash
-   pnpm dev
-   ```
-
-   This will start the development server, usually accessible at `http://localhost:3000`.
-
-#### Build for Production
-
-To build the application for deployment:
-
-```bash
-pnpm build
+```
+.
+├── app/              # Client-side source (Nuxt 4 srcDir)
+│   ├── assets/       # CSS, fonts, images
+│   ├── components/   # Auto-imported Vue components
+│   ├── layouts/      # Page layouts
+│   ├── pages/        # File-based routes
+│   ├── app.config.ts # Nuxt UI theme/runtime config
+│   └── app.vue       # Root component
+├── server/           # Server routes and middleware
+├── public/           # Static assets served as-is
+├── test/             # Test suites (unit / e2e / nuxt)
+├── nuxt.config.ts    # Nuxt configuration
+├── oxlint.config.ts  # Linter configuration
+├── oxfmt.config.ts   # Formatter configuration
+├── vitest.config.ts  # Test runner configuration
+└── .nuxtrc           # Nuxt test-utils setup pin
 ```
 
-This command will compile your application into a production-ready build in the `.output/` directory.
+## Getting Started
 
-#### Start Production Server
+### Prerequisites
 
-If your application uses server-side rendering or server API routes:
+- **[Bun](https://bun.sh)** — `curl -fsSL https://bun.sh/install | bash`
+
+### Install
 
 ```bash
-pnpm start
+bun install
 ```
 
-This command starts the production server.
+### Develop
 
-### License
+```bash
+bun run dev
+```
 
-This project is licensed under the [MIT License](LICENSE).
+The dev server starts at <http://localhost:3000>.
+
+### Build
+
+```bash
+bun run build      # production build into .output/
+bun run preview    # preview the production build locally
+bun run generate   # static site generation
+```
+
+## Scripts
+
+| Command             | Description                      |
+| ------------------- | -------------------------------- |
+| `bun run dev`       | Start the Nuxt dev server        |
+| `bun run build`     | Build for production             |
+| `bun run generate`  | Generate static site             |
+| `bun run preview`   | Preview the production build     |
+| `bun run lint`      | Lint with oxlint                 |
+| `bun run lint:fix`  | Lint and auto-fix                |
+| `bun run fmt`       | Format with oxfmt                |
+| `bun run fmt:check` | Check formatting without writing |
+| `bun run test`      | Run all Vitest projects          |
+| `bun run test:unit` | Run only unit tests              |
+| `bun run test:nuxt` | Run only Nuxt-environment tests  |
+
+## License
+
+[MIT](LICENSE)
